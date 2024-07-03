@@ -1,0 +1,38 @@
+.cita {
+  background: #fff;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.cita:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cita p {
+  margin: 0 0 0.5rem 0;
+  color: #495057;
+}
+
+.cita span {
+  font-weight: normal;
+  color: #6c757d;
+}
+
+.button.eliminar {
+  background-color: #dc3545;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.button.eliminar:hover {
+  background-color: #c82333;
+}
