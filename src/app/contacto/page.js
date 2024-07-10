@@ -49,8 +49,12 @@ export default function Contacto() {
   };
 
   return (
+    
     <div className={styles.contacto}>
+        <div className='centrador'>
       <h1 className={styles.title}>Contacto</h1>
+      </div>
+      <div className='centrador'>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
           <label htmlFor="nombre" className={styles.label}>Nombre</label>
@@ -89,6 +93,8 @@ export default function Contacto() {
         </div>
         <button type="submit" className={styles.button}>Enviar</button>
       </form>
+      </div>
     </div>
+    
   );
 }

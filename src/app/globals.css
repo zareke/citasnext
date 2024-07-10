@@ -6,9 +6,14 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+.centrador{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .container {
-  max-width: 800px;
+  min-width: 800px;
   margin: 0 auto;
   height: 100vh;
   display: flex;
