@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import styles from './contacto.css';
-
+import Titulo from "../components/Titulo.js";
+import Formulario from "../components/Formulario.js";
+import ListaCitas from "../components/ListaCitas.js";
 export default function Contacto() {
   const [formData, setFormData] = useState({
     nombre: '',
@@ -49,52 +51,54 @@ export default function Contacto() {
   };
 
   return (
-    
+
     <div className={styles.contacto}>
-        <div className='centrador'>
-      <h1 className={styles.title}>Contacto</h1>
+      <div className='centrador'>
+          <h1 className={styles.title}>Contacto</h1>
+        
       </div>
       <div className='centrador'>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.formGroup}>
-          <label htmlFor="nombre" className={styles.label}>Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            value={formData.nombre}
-            onChange={handleChange}
-            className={styles.input}
-          />
-          {errors.nombre && <p className={styles.error}>{errors.nombre}</p>}
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="email" className={styles.label}>Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={styles.input}
-          />
-          {errors.email && <p className={styles.error}>{errors.email}</p>}
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="mensaje" className={styles.label}>Mensaje</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            value={formData.mensaje}
-            onChange={handleChange}
-            className={styles.textarea}
-          ></textarea>
-          {errors.mensaje && <p className={styles.error}>{errors.mensaje}</p>}
-        </div>
-        <button type="submit" className={styles.button}>Enviar</button>
-      </form>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.formGroup}>
+            <label htmlFor="nombre" className={styles.label}>Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              value={formData.nombre}
+              onChange={handleChange}
+              className={styles.input}
+            />
+            {errors.nombre && <p className={styles.error}>{errors.nombre}</p>}
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="email" className={styles.label}>Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className={styles.input}
+            />
+            {errors.email && <p className={styles.error}>{errors.email}</p>}
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="mensaje" className={styles.label}>Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              value={formData.mensaje}
+              onChange={handleChange}
+              className={styles.textarea}
+            ></textarea>
+            {errors.mensaje && <p className={styles.error}>{errors.mensaje}</p>}
+          </div>
+          <button type="submit" className={styles.button}>Enviar</button>
+        </form>
+        
       </div>
     </div>
-    
+
   );
 }
