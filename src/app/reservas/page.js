@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import Image from "next/image";
-import styles from "./reservas.css";
 import Titulo from "../components/Titulo.js";
 import Formulario from "../components/Formulario.js";
 import ListaCitas from "../components/ListaCitas.js";
